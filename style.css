@@ -1,20 +1,21 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-html, body{
-  font-family: Papyrus, Arial, sans-serif;
-  color: rgb(53,50,48);
+html, body {
+  font-family: pt sans, sans-serif;
+  font-size: 16px;
+  color: rgb(53, 50, 48);
   line-height: 1.4;
   margin: 0;
 }
 
 header {
-  background-color: rgb(40,44,52);
+  background-color: rgb(40, 44, 52);
 }
 
 a {
-  color: rgb(53,50,48);
+  color: rgb(53, 50, 48);
   text-decoration: none;
 }
 
@@ -24,24 +25,129 @@ ul {
   padding: 0;
 }
 
-#logo {
-  height: 40px;
-}
-
 nav a {
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
   font-variant: small-caps;
   font-weight: bold;
-  transition: 0.8s all ease;
+  transition: 0.6s all ease;
 }
 
 nav a:hover {
-  color: rgb(102,205,170);
+  color: rgb(102, 205, 170);
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto;
+  height: 100%;
+}
+
+#logo {
+  height: 40px;
+  margin-top: 10px;
+}
+
+#menu {
+  margin-top: 16.5px;
+  text-align: center;
+  display: none;
+}
+
+#menu.show {
+  display: block;
+}
+
+#burger {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  float: right;
+}
+
+h1 {
+  font-variant: small-caps;
+}
+
+h2 {
+  font-variant: small-caps;
+}
+
+/*vh: viewport height*/
+.intro {
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/intro.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.introtext {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+}
+
+.button {
+  background-color: rgb(102,205,170);
+  color: #fff;
+  padding: 1rem;
+  text-shadow: black 1px 1px 1px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 0px rgba(7,74,63,0.71);
+  transition: 0.6s ease;
+}
+
+.button:hover {
+  background-color: rgb(69,139,116);
+}
+
+#main img {
+  width: 100%;
+  display: block;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+}
+
+.card {
+  width: 100%;
+}
+
+.card p {
+  font-family: 'pt serif', serif;
+}
+
+.teaser {
+  text-align: center;
+  padding: 1rem;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-top: 0px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+.teaser a {
+  display: block;
+}
+
+.teaser h3 {
+  margin: 0;
 }
 
 @media (min-width: 768px) {
-  #menu{
-    float:right;
+  #menu {
+    float: right;
+    display: block;
   }
   header {
     height: 60px;
@@ -49,13 +155,20 @@ nav a:hover {
   #menu li {
     float: left;
     margin-right: 20px;
-    margin-top: 5px;
   }
-  #logo {
-    margin-top: 10px;
+  #menu li:last-child {
+    margin-right: 0;
   }
-  .wrapper {
-    width: 90%;
-    margin: auto;
+  #burger {
+    display: none;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  .introtext p {
+    font-size: 2rem;
+  }
+  .card {
+    width: 50%;
   }
 }
